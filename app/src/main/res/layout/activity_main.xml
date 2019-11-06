@@ -64,4 +64,12 @@
         style="@style/Btn_Style"
         android:background="@drawable/btnimg"
         />
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recycle View"
+        style="@style/Btn_Style"
+        android:background="@drawable/btnimg"
+        />
 </LinearLayout>

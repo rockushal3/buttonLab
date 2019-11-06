@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btn1,btn2,btn3,btn4,btn5,btn6;
+    Button btn1,btn2,btn3,btn4,btn5,btn6,btn7;
     TextView text1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn4 = findViewById(R.id.btn4);
         btn5 = findViewById(R.id.btn5);
         btn6 = findViewById(R.id.btn6);
+        btn7 = findViewById(R.id.btn7);
         btn1.setOnClickListener(this);
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn4.setOnClickListener(this);
+        btn7.setOnClickListener(this);
     }
 
     @Override
@@ -53,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if(view.getId() == R.id.btn6){
             Intent intent = new Intent(MainActivity.this,frame.class);
+            startActivity(intent);
+        }
+        if(view.getId() == R.id.btn7){
+            Intent intent = new Intent(MainActivity.this,recycle.class);
             startActivity(intent);
         }
     }

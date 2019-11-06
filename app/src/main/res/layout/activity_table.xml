@@ -164,11 +164,7 @@
         android:layout_span="2"
         android:text="list view"/>
     </TableRow>
-<!--    <CalendarView-->
-<!--        android:id="@+id/calenderView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"/>-->
+
 
 </TableLayout>
 

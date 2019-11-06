@@ -1,12 +1,10 @@
 package com.example.buttonlab;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
@@ -21,11 +19,14 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.buttonlab.module.User;
+
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
-import java.util.regex.Pattern;
 
 public class table extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
 
@@ -37,6 +38,7 @@ public class table extends AppCompatActivity implements RadioGroup.OnCheckedChan
     String[] countr = {"Nepal", "India", "Srilanka", "Bhutan", "Maldives", "Pakistan", "Afganistan"};
     String uname, udob, uphone, uemail, ugender, ucountry;
     CalendarView calendarView;
+    List<User> userList = new ArrayList<>();
     Calendar calendar = Calendar.getInstance();
     DatePickerDialog.OnDateSetListener mydatepicker = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -134,6 +136,7 @@ public class table extends AppCompatActivity implements RadioGroup.OnCheckedChan
         }
         if (view.getId() == R.id.click){
             Intent intent = new Intent(table.this,listdata.class);
+            intent.putExtra("allusers",(Serializable) userList);
             startActivity(intent);
         }
     }
