@@ -3,7 +3,7 @@ package com.example.buttonlab.module;
 
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class User  {
     private String name;
     private String gender;
     private String dob;
